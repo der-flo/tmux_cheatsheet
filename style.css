@@ -1,0 +1,74 @@
+/* wkhmtmltopdf needs true-type fonts */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJYW_AySPyikQrZReizgrnuw.ttf) format('truetype');
+}
+
+h1, h2, h3, p, blockquote {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: black;
+  background-color: white;
+  margin: 10px 13px;
+}
+table {
+  margin: 10px 0 15px 0;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 3px 10px;
+}
+
+a {
+  color: #0069d6;
+}
+p {
+  margin-bottom: 9px;
+}
+h1, h2, h3 {
+  color: #404040;
+  line-height: 36px;
+}
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+
+code, pre {
+    font-family: 'Droid Sans Mono', monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: black;
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+table, pre {
+  /*page-break-inside: avoid;*/
+}
+
+

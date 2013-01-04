@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    pdfkit (0.5.2)
+    redcarpet (2.2.2)
+    wkhtmltopdf-binary (0.9.9.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pdfkit
+  redcarpet
+  wkhtmltopdf-binary
