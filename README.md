@@ -5,12 +5,14 @@ Based on [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtm
 | Shell command | Description |
 | --- | ---- |
 | `tmux new-session -s sessionname`<br>`tmux new -s sessionname` | Create a named session called *sessionname* |
-| `tmux new -s sessionname -d` | Create detached session |
+| `tmux new -s sessionname -d top` | Create detached session and run *top* inside |
 | `tmux new -s sessionname -n win` | Create session *sessionname* with window *win* |
 | `tmux list-sessions` <br> `tmux ls` | |
 | `tmux attach` | |
 | `tmux attach -t sessionname` | Attach to session with name *sessionname* |
 | `tmux kill-session -t sessionname` | |
+| `tmux has-session -t sessionname`| Returns 0 if session exists |
+| `new_tmux_session`|Force create session in background |
 
 | PREFIX (`CTRL-b`) + … | Description | Custom mapping |
 | --------------------- | ----------- | -------------- |
@@ -29,7 +31,6 @@ Based on [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtm
 | `"`|Split vertically ||
 | `-` | Split vertically|yes |
 | `o`|Cycle through panes ||
-| `UP`, `DOWN`, `LEFT`, `RIGHT`|Move to next pane in direction ||
 |`h`, `j`, `k`, `l`|Select next pane in vim-direction|yes|
 | `SPACE`|Cycle pane layout (`even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical`, `tiled`) ||
 |`CTRL-h`, `CTRL-l`|Select next/previous window|yes|
@@ -40,7 +41,15 @@ Based on [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtm
 | `ESCAPE`|Enter copy mode ||
 | `p`|Paste from buffer||
 | `r`| Reload config file (`.tmux.conf`)| yes |
-| `CTRL-c`|Copy buffer to MAC clipboard |
+| `CTRL-c`|Copy buffer to MAC clipboard ||
+| `!`| Move active pane to a new window ||
+| `(`| Switch to next session ||
+| `)`| Switch to previous session ||
+| `s`| Show session menu ||
+| `$`| Rename session ||
+| `.`| Move window to another session ||
+| `P`| Toggle logging output to ~/*window_name*.log|yes|
+
 
 ## Command mode
 
@@ -52,6 +61,8 @@ Command|Description
 `save-buffer file.txt`|Save buffer to `file.txt`
 `list-buffers`|Show all buffers
 `choose-buffer`|Chosse a buffer and paste
+`join-pane -s source_session_name:1.1`|Move pane 1 in window 1 of session source_session_name to the actual window`
+`join-pane -s src_sess:2.1 -t dst_sess:1.1`|Move pane 1 in window 2 of session src_sess to session dst_session in window 1 near pane 1`
 
 ## Copy mode
 Key|Description
