@@ -12,43 +12,54 @@ Based on [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtm
 | `tmux attach -t sessionname` | Attach to session with name *sessionname* |
 | `tmux kill-session -t sessionname` | |
 | `tmux has-session -t sessionname`| Returns 0 if session exists |
-| `new_tmux_session`|Force create session in background |
 
-| PREFIX (`CTRL-b`) + … | Description | Custom mapping |
-| --------------------- | ----------- | -------------- |
-| `d`|Detach ||
-| `c`| Create window ||
-| `,`| Rename window ||
-| `n`|Go to next window ||
-| `p`|Go to previous window ||
-| `0`|Go to window no `0` ||
-| `1`|Go to window no `1` ||
-| `f`|Find window by name ||
-| `w`|Select window by menu ||
-| `&`|Kill window (after confirmation) ||
-| `%`|Split horizontally ||
-| `PIPE`|Split horizontally | yes|
-| `"`|Split vertically ||
-| `-` | Split vertically|yes |
-| `o`|Cycle through panes ||
-|`h`, `j`, `k`, `l`|Select next pane in vim-direction|yes|
-| `SPACE`|Cycle pane layout (`even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical`, `tiled`) ||
-|`CTRL-h`, `CTRL-l`|Select next/previous window|yes|
-|`H`, `J`, `K`, `L`|Resize pane in vim-direction (5 column-wise)|yes|
-| `x`|Kill pane (after confirmation) ||
-| `:`|Enter command mode ||
-| `?`|See all keybindings ||
-| `ESCAPE`|Enter copy mode ||
-| `p`|Paste from buffer||
-| `r`| Reload config file (`.tmux.conf`)| yes |
-| `CTRL-c`|Copy buffer to MAC clipboard ||
-| `!`| Move active pane to a new window ||
-| `(`| Switch to next session ||
-| `)`| Switch to previous session ||
-| `s`| Show session menu ||
-| `$`| Rename session ||
-| `.`| Move window to another session ||
-| `P`| Toggle logging output to ~/*window_name*.log|yes|
+
+PREFIX (`CTRL-b`) + … | Description | Custom mapping
+--------------------- | ----------- | --------------
+`d`|Detach |
+`:`|Enter command mode |
+`?`|See all keybindings |
+`r`| Reload config file (`.tmux.conf`)| yes
+`(`| Switch to next session |
+`)`| Switch to previous session |
+`s`| Show session menu |
+`$`| Rename session |
+`P`| Toggle logging output to ~/*window_name*.log|yes
+`ESCAPE`|Enter copy mode |
+`p`|Paste from buffer|
+`CTRL-c`|Copy buffer to MAC clipboard |
+
+
+## Windows
+
+PREFIX (`CTRL-b`) + … | Description | Custom mapping
+--------------------- | ----------- | --------------
+`c`| Create window |
+`,`| Rename window |
+`n`|Go to next window |
+`CTRL-h`, `CTRL-l`|Select next/previous window|yes
+`0`|Go to window no `0` |
+`1`|Go to window no `1` |
+`f`|Find window by name |
+`w`|Select window by menu |
+`&`|Kill window (after confirmation) |
+`x`|Kill pane (after confirmation) |
+`.`| Move window to another session |
+
+
+## Panes
+
+PREFIX (`CTRL-b`) + … | Description | Custom mapping
+--------------------- | ----------- | --------------
+`%`|Split horizontally |
+`PIPE`|Split horizontally | yes
+`"`|Split vertically |
+`-` | Split vertically|yes
+`o`|Cycle through panes |
+`h`, `j`, `k`, `l`|Select next pane in vim-direction|yes
+ `SPACE`|Cycle pane layout (`even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical`, `tiled`) |
+`H`, `J`, `K`, `L`|Resize pane in vim-direction (5 column-wise)|yes
+`!`| Move active pane to a new window |
 
 
 ## Command mode
