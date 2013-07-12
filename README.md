@@ -43,7 +43,6 @@ PREFIX (`CTRL-b`) + … | Description | Custom mapping
 `f`|Find window by name |
 `w`|Select window by menu |
 `&`|Kill window (after confirmation) |
-`x`|Kill pane (after confirmation) |
 `.`| Move window to another session |
 
 
@@ -60,7 +59,10 @@ PREFIX (`CTRL-b`) + … | Description | Custom mapping
  `SPACE`|Cycle pane layout (`even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical`, `tiled`) |
 `H`, `J`, `K`, `L`|Resize pane in vim-direction (5 column-wise)|yes
 `!`| Move active pane to a new window |
-
+`z`| Zoom pane | tmux 1.8
+`UP`| Maximize pane | yes
+`DOWN` | Redo maximize pane | yes
+`x`|Kill pane (after confirmation) |
 
 ## Command mode
 
